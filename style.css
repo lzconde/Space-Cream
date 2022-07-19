@@ -251,6 +251,7 @@ footer{
 
     footer{
         grid-area: Footer;
+        display: block;
         text-align: center;
         padding: 5rem 0 2rem;
 
