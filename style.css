@@ -136,6 +136,10 @@ main div:first-of-type{
     animation: right 700ms 350ms backwards;
 }
 
+footer{
+    display: none;
+}
+
 @keyframes left {
     0%{
         opacity: 0;
