@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-blue: #4A4E69;
+    --light-blue: #8E9AAF;
+    --violet: #CBC0D3;
+    --cream: #FEEAFA;
+    --sky-blue: #EFF1FF;
+
+    --fs-header: 4rem;
+    --fs-main: 2rem;
+    --ff-principal: 'Staatliches', cursive;
+    --ff-text: 'Palanquin', sans-serif;
+
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--ff-principal);
+
+    background-color: var(--sky-blue);
+}
+
+.page{
+    max-width: 42.5rem;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    width: 100%;
+    height: 28rem;
+
+    background-color: var(--light-blue);
+}
+
+header img{
+    width: 13.7rem;
+    margin-top: 3.2rem;
+}
+
+header .text-header {
+    height: 4.9rem;
+    width: 100%;
+    background-color: var(--violet);
+    display: flex;
+    align-items: center;
+
+}
+
+header h1{
+    font-weight: 400;
+    font-size: var(--fs-header);
+    line-height: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+   
+    margin: 0 auto;
+    color: #FFF;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    padding-top: 1.4rem;
+}
+
+main p {
+    width: 38.5rem;
+    text-align: center;
+
+    font-family: var(--ff-text);
+    font-size: var(--fs-main);
+    line-height: 2rem;
+    color: #23053A;
+}
+
+main div:first-of-type{
+    margin-top: 3rem;
+}
+
+.card{
+    position: relative;
+}
+.card img{
+    width: 32rem;
+
+    animation: left 700ms;
+}
+
+.card span{
+    position: absolute;
+    top: 1.7rem;
+    right: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    
+    
+    padding: 2rem;
+    width: 11.2rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+
+    color: #4A4E69;
+    background-color: var(--cream);
+
+    animation: right 700ms 350ms backwards;
+}
+
+@keyframes left {
+    0%{
+        opacity: 0;
+        transform: translateX(-25px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right {
+    0%{
+        opacity: 0;
+        transform: translateX(25px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
