@@ -74,6 +74,10 @@ header h1{
     color: #FFF;
 }
 
+header p{
+    display: none;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -155,5 +159,113 @@ main div:first-of-type{
     100%{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+
+@media (min-width:700px){
+    .page {
+        max-width: 140rem;
+        display: grid;
+        grid-template-areas: "Header Main "
+                            "Header Footer ";
+        grid-template-columns: 377px 1fr;
+
+        padding: 0;
+    }
+
+    
+
+    header{
+        grid-area: Header;
+        height: 100%;
+    }
+
+    header p{
+        display: block;
+        width: 27.5rem;
+        height: 26.2rem;
+
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.0rem;
+        font-family: 'Palanquin', sans-serif;
+        text-align: center;
+        color: #FFF;
+
+    }
+    
+    main{
+        grid-area: Main;
+
+        display: grid;
+        justify-items: center;
+        
+        grid-template-areas:   
+        "a d"
+        "b c";
+        
+        
+    }
+
+    .card:nth-child(1){
+        grid-area: a;
+    }
+
+    .card:nth-child(2){
+        grid-area: b;
+    }
+    
+    .card:nth-child(3){
+        grid-area: d;
+    }
+
+    .card:nth-child(4){
+        grid-area: c;
+    }
+
+    .card span{
+        right: 3rem;
+    }
+
+    .card img{
+
+        transition: all 300ms;
+    }
+
+    .card img:hover{
+        transform: scale(1.1);
+    }
+
+    main p{
+        display: none;
+    }
+
+    main div:first-of-type{
+        margin-top: 0;
+    }
+
+    footer{
+        grid-area: Footer;
+        text-align: center;
+        padding: 5rem 0 2rem;
+
+    }
+
+    footer p{
+        color: #4A4E69;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        font-family: var(--fs-main);
+    }
+
+    footer a{
+        text-decoration: none;
+        color: #4A4E69;
+    }
+
+    footer a:hover{
+        text-decoration: underline;
     }
 }
